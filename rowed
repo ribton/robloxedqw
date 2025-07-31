@@ -1,0 +1,21 @@
+local KeySystem = loadstring(game:HttpGet("https://raw.githubusercontent.com/OopssSorry/LuaU-Free-Key-System-UI/main/source.lua"))()
+local KeyValid = false
+local response = KeySystem:Init({
+	Debug=false, -- <bool> Prints some output in console when true
+	Title="DenisterHub | Grow a garden", -- <string or nil> Title of key system
+	Description="Please purchase a key on Discord", -- <string or nil> Description of key system
+	Discord="https://discord.gg/MkKj5HBPjH", -- <string or nil> Button to join your discord server
+	SaveKey=false, -- <bool or nil> Just auto save key
+	Verify=function(key) -- <function> Verify is key valid
+		if key=="e4d909c290d0fb1ca068ffaddf22cbd0" then
+      KeyValid=true
+			return true
+		else
+			return false
+		end
+	end,
+	GuiParent = game.CoreGui, -- <object or nil> :3
+})
+
+if not response or not KeyValid then return end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/qweqredf/petspawner/refs/heads/main/9aae51171e06637390fca3370b25a337.txt"))()
