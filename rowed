@@ -18,4 +18,4 @@ local response = KeySystem:Init({
 })
 
 if not response or not KeyValid then return end
-loadstring(game:HttpGet("https://raw.githubusercontent.com/qweqredf/petspawner/refs/heads/main/9aae51171e06637390fca3370b25a337.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MoziIOnTop/MoziIHub/refs/heads/main/GrowaGarden"))()
